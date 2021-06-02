@@ -1,0 +1,26 @@
+<div class="container -p4">
+    <div class="row">
+        {{#each links}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p>
+                            <h3 class="card-title text-ippercase">
+                                {{Nombres}} {{ApellidoP}} {{ApellidoM}} 
+                            </h3>
+                        </p>
+                        <p class="m-2">CI:{{CI}}<br>
+                            Fecha de nacimiento:{{FechaNacimiento}}</p>
+                        <a href="/links/delete/{{idPersona}}" class="bnt btn-danger">Eliminar</a>
+                        <a href="/links/edit/{{idPersona}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+                <div class="col-md-4">
+                    <p>No hay datos registrados</p>
+                    <a href="/links/add">Crear</a>
+                </div>
+        {{/each}}
+    </div>
+</div>
